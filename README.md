@@ -1,76 +1,44 @@
-# Template Project for Game Development using **Phaser**
+# r301-js-invaders
 
-This repository provides a starter template for developing browser-based games with [**Phaser**](https://phaser.io/).
+Petit jeu "Space Invader" en JavaScript (template pédagogique).
 
-## Getting Started
+## Résumé
+- Jeu de type Space Invaders simple, implémenté avec JavaScript et servi via Vite.
+- But : tirer sur des vagues d'ennemis, collecter des bonus et survivre le plus longtemps possible.
 
-Clone the repository:
-```shell
-git clone --depth=1 https://iut-info.univ-reims.fr/gitlab/jonque01/r301-js-template PROJECT_NAME
-```
+## Structure rapide
+- `src/index.html` : page d'entrée.
+- `src/index.js` : point d'initialisation du jeu.
+- `src/config.js` : paramètres globaux (tailles, vitesses, etc.).
+- `src/scene/Play.js` : boucle et logique principale de la scène de jeu.
+- `src/object/` : classes des objets (Player.js, Laser.js, Enemys.js, Bonus.js, etc.).
 
-Remove the existing **Git** history:
-```shell
-cd PROJECT_NAME
-rm -rf .git
-```
+## Tech / dépendances
+- Outils : Vite (serveur de dev et bundling).
+- Code : JavaScript ES modules, structure simple pour l'apprentissage.
 
-Before creating your own local **Git** repository, you may want to update the [the *package.json* file](https://docs.npmjs.com/cli/v11/configuring-npm/package-json) that store project information.
+## Lancer le projet (développement)
+1. Installer les dépendances :
 
-Install the project dependencies:
-```shell
+```bash
 npm install
 ```
 
+2. Lancer le serveur de développement :
 
-## Project Scripts
-
-You can manage the project using [*npm scripts*](https://docs.npmjs.com/cli/v8/using-npm/scripts) defined in *package.json*.
-
-### Development server
-```shell
+```bash
 npm run dev
 ```
-Runs the *dev* script, which starts **Vite**’s development server.
 
-The local server serves static assets, compiles files, and automatically reloads the page when source files change.
+3. Ouvrir l'URL affichée dans le terminal (par défaut `http://localhost:5173`).
 
-### Build the project
-```shell
-npm run build
-```
-Runs the *build* script, which bundles the project into the *build* directory as a standalone version.
+## Contrôles (par défaut)
+- Déplacer : Q / D
+- Tirer : `Espace`
 
-### Check of the builded project
-```shell
-npm run preview
-```
-Runs the *preview* script, which launches a local server to serve the standalone version from the *build* directory.
+## Remarques
+- Pour créer une build de production : `npm run build` (si présent dans `package.json`).
 
-### Run the *linter* and fix code
-```shell
-npm run fix
-```
-Runs the *fix* script, which launches **ESLint** to lint the source code and automatically fix issues when possible.
+---
 
-
-## Project Dependencies
-
-### Development environment
-[**vite**](https://vite.dev/) is a fast **JavaScript** bundler that come with a development server.
-
-### Game framwork
-[**Phaser**](https://phaser.io/) is a 2D game framework for building browser-based games.
-
-### Linter
-[**ESLint**](https://eslint.org/) is a configurable **JavaScript** linter that helps enforce code quality. 
-
-### Code formatter
-[**Prettier**](https://prettier.io/) is a code formatter that ensures consistent code style.
-This project is configured to integrate **Prettier** with **ESLint**.
-
-
-## Linter Configuration
-To simplify setup, this project uses [the **ESLint** configuration used by the **ESLint** team](https://github.com/eslint/eslint/tree/main/packages/eslint-config-eslint).
-
-For convenience, the requirement for code documentation has been disabled in *eslint.config.js*.
+Bon jeu !
